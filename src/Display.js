@@ -10,7 +10,7 @@ class Display extends Component {
       articles: []
     }
     this.apiUrl = 'https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=2d39f4a218f64820a010ae5523437bc4'
-    //this.apiUrl = 'https://newsapi.org/v1/sources?language=en'
+    
 }
   // Lifecycle method
   componentDidMount(){
