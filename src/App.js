@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Search from './Search.js';
 import './Search.css';
-import Display from './Display.js';
-import './Display.css';
+
 
 class App extends Component {
   render() {
@@ -15,7 +14,6 @@ class App extends Component {
           <p>Using <a href="">React</a> and <a href="">News API</a> </p>
         </div>
         <Search default="bbc-news"/>
-        <Display default="bbc-news"/>
       </div>
     );
   }

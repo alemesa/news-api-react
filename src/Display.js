@@ -7,24 +7,55 @@ class Display extends Component {
     super(props);
     // Set initial state
     this.state = {
-      articles: [],
-      default: this.props.default
+      articles: []
     }
     //&sortBy=latest
-    this.apiUrl = `https://newsapi.org/v1/articles?source=${this.state.default}&apiKey=2d39f4a218f64820a010ae5523437bc4`
-    
+     
 }
+
+  
+
   // Lifecycle method
-  componentDidMount(){
-    // Make HTTP reques with Axios
-    axios.get(this.apiUrl)
-      .then((res) => {
-        // Set state with result
-        this.setState({articles:res.data.articles});
-        console.log(this.setState.articles);
-      });
+  componentWillMount(){
+    this.getArticles(this.props.default);
+   
   }
 
+   componentWillReceiveProps(nextProps) {
+
+
+    if (nextProps !== this.props) {
+
+
+        this.setState({
+
+          url: `https://newsapi.org/v1/articles?source=${nextProps.default}&apiKey=2d39f4a218f64820a010ae5523437bc4`,
+
+        });
+
+ this.getArticles(nextProps.default);
+
+    }
+    console.log(this.props);
+    console.log(nextProps);
+    
+}
+
+getArticles(url){
+    
+    const apiKey = "2d39f4a218f64820a010ae5523437bc4";
+      // Make HTTP reques with Axios
+      axios.get(`https://newsapi.org/v1/articles?source=${url}&apiKey=${apiKey}`)
+        .then((res) => {
+          const articles = res.data.articles;
+          // Set state with result
+          console.log(articles);
+          this.setState({ articles: articles });
+        }).catch((error) => {
+          console.log(error);
+        });
+
+  }
 
 
   render() {

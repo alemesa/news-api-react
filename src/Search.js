@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Display from './Display.js';
+import './Display.css';
 
 class Search extends Component {
     constructor(props){
@@ -9,7 +11,7 @@ class Search extends Component {
     this.state = {
       data: [],
      // value:'bbc-news'
-     value: this.props.default,
+      value: this.props.default,
     }
     this.handleChange = this.handleChange.bind(this);
 
@@ -21,9 +23,10 @@ class Search extends Component {
     console.log(this.state.value);
   }
 
+ 
   
   // Lifecycle method
-  componentDidMount(){
+  componentWillMount(){
     // Make HTTP reques with Axios
     axios.get(this.apiUrl)
       .then((res) => {
@@ -51,6 +54,7 @@ class Search extends Component {
         }
         
       </select>
+      <Display default={this.state.value}/>
 
       </div>
     );
