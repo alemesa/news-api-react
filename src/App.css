@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -26,3 +32,4 @@ a{
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+

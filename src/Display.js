@@ -41,6 +41,18 @@ class Display extends Component {
     
 }
 
+//Function to convert ISO
+convertDate(date){
+  var time = new Date(date);
+  var year = time.getFullYear();
+  var day = time.getDate();
+  var hour = time.getHours();
+  var minute = time.getMinutes();
+  var month = time.getMonth() + 1;
+  var composedTime = day + "/" + month + "/" + year + " | " + hour + ":" + minute;
+  return composedTime;
+}
+
 getArticles(url){
     
     const apiKey = "2d39f4a218f64820a010ae5523437bc4";
@@ -67,7 +79,7 @@ getArticles(url){
         {
             this.state.articles.map((news,i) =>{
                 return <div className="singleNew" key={i} ><h4><a href={news.url} target="_blank">{news.title}</a> </h4>
-                <h6>{news.author} | {news.publishedAt}</h6>
+                <h6>{news.author} |  {this.convertDate(news.publishedAt)}</h6>
                                     <p>{news.description}</p>
                                     <img src={news.urlToImage} alt=""/>
                         <hr></hr></div>
