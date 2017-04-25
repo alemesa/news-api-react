@@ -7,10 +7,11 @@ class Display extends Component {
     super(props);
     // Set initial state
     this.state = {
-      articles: []
+      articles: [],
+      default: this.props.default
     }
     //&sortBy=latest
-    this.apiUrl = 'https://newsapi.org/v1/articles?source=cnn&apiKey=2d39f4a218f64820a010ae5523437bc4'
+    this.apiUrl = `https://newsapi.org/v1/articles?source=${this.state.default}&apiKey=2d39f4a218f64820a010ae5523437bc4`
     
 }
   // Lifecycle method

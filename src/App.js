@@ -14,8 +14,8 @@ class App extends Component {
           <h2>Welcome to React News API</h2>
           <p>Using <a href="">React</a> and <a href="">News API</a> </p>
         </div>
-        <Search/>
-        <Display/>
+        <Search default="bbc-news"/>
+        <Display default="bbc-news"/>
       </div>
     );
   }
