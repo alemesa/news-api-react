@@ -9,7 +9,8 @@ class Display extends Component {
     this.state = {
       articles: []
     }
-    this.apiUrl = 'https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=2d39f4a218f64820a010ae5523437bc4'
+    //&sortBy=latest
+    this.apiUrl = 'https://newsapi.org/v1/articles?source=cnn&apiKey=2d39f4a218f64820a010ae5523437bc4'
     
 }
   // Lifecycle method
@@ -33,7 +34,11 @@ class Display extends Component {
        
         {
             this.state.articles.map((news,i) =>{
-                return <div key={i} ><h5>{news.title}</h5><p>{news.description}</p></div>
+                return <div className="singleNew" key={i} ><h4><a href={news.url} target="_blank">{news.title}</a> </h4>
+                <h6>{news.author} | {news.publishedAt}</h6>
+                                    <p>{news.description}</p>
+                                    <img src={news.urlToImage} alt=""/>
+                        <hr></hr></div>
             })
         }
       
