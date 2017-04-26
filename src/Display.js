@@ -9,7 +9,6 @@ class Display extends Component {
     this.state = {
       articles: []
     }
-    //&sortBy=latest
      
 }
 
@@ -35,10 +34,7 @@ class Display extends Component {
 
  this.getArticles(nextProps.default);
 
-    }
-    console.log(this.props);
-    console.log(nextProps);
-    
+    }  
 }
 
 formatDate(date){
