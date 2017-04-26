@@ -41,8 +41,7 @@ class Display extends Component {
     
 }
 
-//Function to convert ISO
-convertDate(date){
+formatDate(date){
   var time = new Date(date);
   var year = time.getFullYear();
   var day = time.getDate();
@@ -79,7 +78,7 @@ getArticles(url){
         {
             this.state.articles.map((news,i) =>{
                 return <div className="singleNew" key={i} ><h4><a href={news.url} target="_blank">{news.title}</a> </h4>
-                <h6>{news.author} |  {this.convertDate(news.publishedAt)}</h6>
+                <h6>{news.author} |  {this.formatDate(news.publishedAt)}</h6>
                                     <p>{news.description}</p>
                                     <img src={news.urlToImage} alt=""/>
                         <hr></hr></div>

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Display from './Display.js';
 import './Display.css';
+import Outlet from './Outlet.js';
+import './Outlet.css';
 
 class Search extends Component {
     constructor(props){
@@ -54,6 +56,7 @@ class Search extends Component {
         }
         
       </select>
+      <Outlet default={this.state.value}/>
       <Display default={this.state.value}/>
 
       </div>
