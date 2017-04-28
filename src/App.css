@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans');
 
 *{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans','Roboto', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Libre Baskerville','Merriweather', serif;
 }
 
 .App {
@@ -32,6 +36,9 @@ a{
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+/* Scrollbar */
 
 body::-webkit-scrollbar {
 	width: 10px;
