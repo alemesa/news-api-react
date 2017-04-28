@@ -1,0 +1,22 @@
+.footerSection{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    margin:10px 0px;
+}
+
+.fa-github{color:#131418;}
+.fa-twitter{color:#55acee;}
+.fa-linkedin{color:#0077B5;}
+.fa-instagram{color:#df2029;}
+.fa-coffee{color:#4E342E;}
+
+.fa{
+	margin:7px;
+	transition:0.4s all ease-in;
+	text-shadow:0px 0px 0px white;
+}
+.fa:hover{
+	transform:rotate(360deg);
+	cursor:pointer;
+}

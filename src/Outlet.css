@@ -1,0 +1,18 @@
+.outletSection{
+    width:60%;
+    margin:0 auto;
+    margin-top:1rem; 
+    padding:10px;
+    border-radius: 5px;
+	border:1px solid black;
+}
+
+.generalInfo{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
+.generalInfo > *{
+    margin:0 8px;
+}

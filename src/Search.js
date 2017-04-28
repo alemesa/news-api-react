@@ -12,6 +12,7 @@ class Search extends Component {
     // Set initial state
     this.state = {
       data: [],
+      count: 0,
      // value:'bbc-news'
       value: this.props.default,
     }
@@ -34,9 +35,13 @@ class Search extends Component {
       .then((res) => {
         // Set state with result
         this.setState({data:res.data.sources});
+        this.setState({count:res.data.sources.length});
         //console.log(this.state.data);
         console.log(this.state.value);
       });
+
+
+
   }
 
 
@@ -45,7 +50,7 @@ class Search extends Component {
     return (
       <div className="">
 
-      <h2>Search Component</h2>
+      <h5>Pick from {this.state.count} News Outlets</h5>
       <select value={this.state.value} onChange={this.handleChange}>>
        
       

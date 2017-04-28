@@ -6,7 +6,8 @@
     "bootstrap": "^3.3.7",
     "react": "^15.5.4",
     "react-bootstrap": "^0.30.10",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-ionicons": "^1.4.7"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"

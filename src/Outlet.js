@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './Outlet.css';
 
 class Outlet extends Component {
     constructor(props){
@@ -50,20 +51,26 @@ getSources(){
 
   render() {
     return (
-      <div className="">
+      <div className="outletSection">
 
-      <h2>Display Outlet</h2>
+      <h4>Outlet Info</h4>
        
         {
             this.state.data.map((item)=>{
                 if(item.id === this.state.value){
-                    return <div className="singleNew" ><h4>
-                    <a href={item.url} target="_blank">{item.name}</a> </h4>
-                    <h6>{item.country.toUpperCase()}</h6>
-                    <p>{item.description}</p>
+                    return <div className="singleNew" >
+                    
+                    <div className="generalInfo">
+                    <h4>
+                    <a href={item.url} target="_blank">{item.name}</a> 
+                    </h4>
+                    <h5>{item.country.toUpperCase()}</h5>
                     <p>{item.category.replace(/\b\w/g, l => l.toUpperCase())}</p>
                     <p>{item.language.toUpperCase()}</p>
-                    <hr></hr></div>
+                    </div>
+                    <p>{item.description}</p>
+                    
+                    </div>
                 }
             else{
                 return false;
