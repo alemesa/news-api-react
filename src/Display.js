@@ -67,17 +67,24 @@ getArticles(url){
 
   render() {
     return (
-      <div className="">
+      <div className="cardsContainer">
 
-      <h2>Display Component</h2>
+      
        
         {
             this.state.articles.map((news,i) =>{
-                return <div className="singleNew" key={i} ><h4><a href={news.url} target="_blank">{news.title}</a> </h4>
-                <h6>{news.author} |  {this.formatDate(news.publishedAt)}</h6>
-                                    <p>{news.description}</p>
-                                    <img src={news.urlToImage} alt=""/>
-                        <hr></hr></div>
+                return <div className="card" key={i} >
+                <div className="content">
+                  <h3><a href={news.url} target="_blank">{news.title}</a></h3>
+                  <p>{news.description}</p>
+                  <div className="author">
+                    <p>By {news.author}</p> <p>{this.formatDate(news.publishedAt)}</p>
+                  </div>
+                </div>
+                <div className="image">
+                  <img src={news.urlToImage} alt="" />
+                </div>
+                      </div>
             })
         }
       

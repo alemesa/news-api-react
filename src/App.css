@@ -2,9 +2,10 @@
 
 *{
   font-family: 'Open Sans','Roboto', sans-serif;
+  box-sizing:border-box;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6,a{
   font-family: 'Libre Baskerville','Merriweather', serif;
 }
 
@@ -13,11 +14,16 @@ h1,h2,h3,h4,h5,h6{
 }
 
 a{
+	color:black;
+}
+
+.title a{
   color:white;
 }
 
+
 .appLogo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: logo-spin infinite 20s linear;
   height: 70px;
   margin-top:20px;
 }
@@ -38,7 +44,7 @@ a{
   justify-content:space-around;
 }
 
-@keyframes App-logo-spin {
+@keyframes logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }

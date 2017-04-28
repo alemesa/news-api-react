@@ -12,8 +12,6 @@ class Outlet extends Component {
     }
 }
 
-  
-
   // Lifecycle method
   componentWillMount(){
     // Make HTTP reques with Axios
@@ -22,18 +20,11 @@ class Outlet extends Component {
 
    componentWillReceiveProps(nextProps) {
 
-
     if (nextProps !== this.props) {
-
-
         this.setState({
-
           value: nextProps.default,
-
         });
-
  this.getSources();
-
     }  
 }
 
