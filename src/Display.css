@@ -8,12 +8,16 @@
 	margin:0 auto;
 }
 
+
+
 .card:nth-child(odd){
 	border-right: 1px solid grey;
 }
 
 .card:nth-child(even){
 	border-right: 1px solid white;
+	border-left:1px solid grey;
+	margin-left: -1px;
 }
 
 .author{
