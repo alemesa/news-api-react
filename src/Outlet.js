@@ -44,18 +44,18 @@ getSources(){
     return (
       <div className="outletSection">
 
-      <h4>Outlet Info</h4>
+      <h4>Outlet Description</h4>
        
         {
-            this.state.data.map((item)=>{
+            this.state.data.map((item,y)=>{
                 if(item.id === this.state.value){
-                    return <div className="singleNew" >
+                    return <div key={y} className="singleNew" >
                     
                     <div className="generalInfo">
                     <h4>
                     <a href={item.url} target="_blank">{item.name}</a> 
                     </h4>
-                    <h5>{item.country.toUpperCase()}</h5>
+                    <p>{item.country.toUpperCase()}</p>
                     <p>{item.category.replace(/\b\w/g, l => l.toUpperCase())}</p>
                     <p>{item.language.toUpperCase()}</p>
                     </div>

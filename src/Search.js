@@ -50,7 +50,7 @@ class Search extends Component {
     return (
       <div className="">
 
-      <h5>Pick from {this.state.count} News Outlets</h5>
+      <h4>Select from {this.state.count} News Outlets</h4>
       <select value={this.state.value} onChange={this.handleChange}>>
        
       

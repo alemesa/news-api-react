@@ -9,6 +9,10 @@ h1,h2,h3,h4,h5,h6,a{
   font-family: 'Libre Baskerville','Merriweather', serif;
 }
 
+.title h1{
+  font-size:1.7em;
+}
+
 .app {
   text-align: center;
 }

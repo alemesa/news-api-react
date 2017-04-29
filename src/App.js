@@ -16,8 +16,8 @@ class App extends Component {
           <img className="appLogo" src={logo} alt="React Logo"/>
           
           <div className="title">
-          <h2>Welcome to News</h2>
-          <h4>Powered by <a href="https://newsapi.org/">News API</a></h4>
+            <h1>&lt;insert fancy name&gt;</h1>
+            <h4>Powered by <a href="https://newsapi.org/">News API</a></h4>
           </div>
           
           <img className="scriptLogo" src={news} alt="Javascript Logo"/>

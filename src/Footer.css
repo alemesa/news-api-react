@@ -17,6 +17,8 @@
 	text-shadow:0px 0px 0px white;
 }
 .fa:hover{
-	transform:rotate(360deg);
 	cursor:pointer;
+}
+.fa-github:hover,.fa-twitter:hover,.fa-linkedin:hover{
+	transform:rotate(360deg);
 }

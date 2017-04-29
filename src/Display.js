@@ -44,7 +44,7 @@ formatDate(date){
   var hour = time.getHours();
   var minute = time.getMinutes();
   var month = time.getMonth() + 1;
-  var composedTime = day + "/" + month + "/" + year + " | " + hour + ":" + minute;
+  var composedTime = day + "/" + month + "/" + year + " | " + hour + ":" + ((minute < 10) ? "0" + minute : minute);
   return composedTime;
 }
 
@@ -78,7 +78,7 @@ getArticles(url){
                   <h3><a href={news.url} target="_blank">{news.title}</a></h3>
                   <p>{news.description}</p>
                   <div className="author">
-                    <p>By {news.author}</p> <p>{this.formatDate(news.publishedAt)}</p>
+                    <p>By <i>{news.author ? news.author : this.props.default}</i></p> <p>{this.formatDate(news.publishedAt)}</p>
                   </div>
                 </div>
                 <div className="image">
