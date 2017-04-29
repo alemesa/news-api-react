@@ -84,7 +84,6 @@ links.forEach(link => link.addEventListener("click", function(e) {
             //make a small jump to fix it
             if (totalTraveled >= distance) {
                 window.scrollBy(0, -(totalTraveled - distance));
-                console.log("Fixing distance by " + (-(totalTraveled - distance)));
                 clearInterval(interval);
             }
         }, transitionSpeed);

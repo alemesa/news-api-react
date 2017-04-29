@@ -8,6 +8,9 @@
 	margin:0 auto;
 }
 
+.cardsContainer{
+  flex:1;
+}
 
 
 .card:nth-child(odd){

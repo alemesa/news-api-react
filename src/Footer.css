@@ -8,6 +8,9 @@
 .footerSection a{
 	border-bottom: 1px solid white;
 }
+.footerSection a:hover{
+	border-bottom:2px solid white;
+}
 
 .fa-github{color:#131418;}
 .fa-twitter{color:#55acee;}

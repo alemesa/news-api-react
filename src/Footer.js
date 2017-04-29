@@ -7,7 +7,7 @@ class Footer extends Component {
 
     render() {
         return (
-        <div href="#section1" className="footerSection">
+        <div className="footerSection">
 
         <div className="social">
         
