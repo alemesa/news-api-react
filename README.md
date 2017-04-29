@@ -22,4 +22,4 @@ Open production build on [http://localhost:5000/](http://localhost:5000/)
 
 Or copy to a Web Server
 
-![GIF](http://i.imgur.com/vGaQxpR.gif)
+![GIF](http://i.imgur.com/yWHwHz3.gif)
