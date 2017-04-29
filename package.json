@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "moveto": "^1.6.1",
     "react": "^15.5.4",
     "react-bootstrap": "^0.30.10",
     "react-dom": "^15.5.4",
