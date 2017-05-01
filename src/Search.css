@@ -9,3 +9,14 @@ select {
   margin-bottom: 2px;
   outline: none;
 }
+@media screen and (max-width: 1200px) {
+	select{
+    width:35%;
+  }
+}
+@media screen and (max-width: 500px) {
+	select{
+    width:80%;
+  }
+}
+

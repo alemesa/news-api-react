@@ -75,6 +75,9 @@
 		padding-left: 0;
 		margin-top: 2rem;
 	}
+	.card:nth-child(even) {
+	margin-left: inherit;
+	}
 	.card {
 		display: flex;
 		flex-direction: column;
