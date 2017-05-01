@@ -17,8 +17,7 @@ class App extends Component {
           <div className="title">
             <h1>&lt;insert fancy name&gt;</h1>
             <h4>Powered by
-              <a href="https://newsapi.org/"> News API
-              </a>🔥</h4>
+              <a href="https://newsapi.org/"> News API </a>🔥 </h4>
           </div>
 
           <img className="scriptLogo" src={news} alt="Javascript Logo"/>
