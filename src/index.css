@@ -2,20 +2,20 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  -webkit-font-smoothing: antialiased
 }
 
-a{
+a {
   border-bottom: 2px solid #ffc600;
-  text-decoration:none;
+  text-decoration: none;
 }
-a:hover{
-  border-bottom:2px solid #F9A825;
+
+a:hover {
+  border-bottom: 2px solid #FF8F00;
 }
-body{
+
+body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
-
-
-

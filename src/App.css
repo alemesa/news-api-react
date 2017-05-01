@@ -1,74 +1,79 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans');
-
-*{
-  font-family: 'Open Sans','Roboto', sans-serif;
-  box-sizing:border-box;
+* {
+  font-family: 'Open Sans', 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5,h6,a{
-  font-family: 'Libre Baskerville','Merriweather', serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: 'Libre Baskerville', 'Merriweather', serif;
 }
 
-.title h1{
-  font-size:1.7em;
+.title h1 {
+  font-size: 1.7em;
 }
 
 .app {
   text-align: center;
 }
 
-a{
-	color:black;
+a {
+  color: black;
 }
 
-.title a{
-  color:white;
+.title a {
+  color: white;
 }
-
 
 .appLogo {
   animation: logo-spin infinite 20s linear;
   height: 70px;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
-.scriptLogo{
+.scriptLogo {
   height: 70px;
-  margin-top:20px;
+  margin-top: 20px;
 }
-
-
 
 .appHeader {
   background-color: #222;
-  padding:20px;
+  padding: 20px;
   color: white;
-  display:flex;
-  flex-direction:row;
-  justify-content:space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 @keyframes logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
 
 /* Scrollbar */
 
 body::-webkit-scrollbar {
-	width: 10px;
-	background-color: #F5F5F5;
+  width: 10px;
+  background-color: #F5F5F5;
 }
 
 body::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #F5F5F5;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
 }
 
 body::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #555;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #555;
 }
