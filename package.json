@@ -12,6 +12,8 @@
     "react-scrollable-anchor": "^0.4.2"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-surge": "^0.1.0",
     "react-scripts": "0.9.5"
   },
   "scripts": {

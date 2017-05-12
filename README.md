@@ -1,5 +1,6 @@
 React-App using [React](https://facebook.github.io/react/) & [News API](https://newsapi.org/)
 
+Check a Live version [here](http://news-app.surge.sh/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
