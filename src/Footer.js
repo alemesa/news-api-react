@@ -9,7 +9,7 @@ class Footer extends Component {
 
                 <div className="social">
 
-                    <a href="https://github.com/alemesa1991" target="_blank">
+                    <a href="https://github.com/alemesa" target="_blank">
                         <i className="fa fa-2x fa-github" aria-hidden="true"></i>
                     </a>
                     <a href="https://twitter.com/alelikesramen" target="_blank">
@@ -22,7 +22,7 @@ class Footer extends Component {
                     </a>
                     <a
                         id="repo"
-                        href="https://github.com/alemesa1991/React-News-App"
+                        href="https://github.com/alemesa/React-News-App"
                         target="_blank">Repo
                         <i className="fa fa-code-fork" aria-hidden="true"></i>
                     </a>
