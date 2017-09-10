@@ -24,6 +24,7 @@
 </div>
 
 ## Features
+
 * ⚒️ __Simple__: Bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) and using [React](https://facebook.github.io/react/)
 
 * 📊 __Real-time__: Real time data obtained from the leading news resource [News API](https://newsapi.org/)
@@ -35,11 +36,13 @@
 <!---  SCREENSHOOT   -->
 
 ## Demo
+
 <div align="center">
     <img src="http://i.imgur.com/yWHwHz3.gif"/>
 </div>
 
 ## Usage
+
 Fork or download this repo , move inside and run:
 
 ```javascript
@@ -60,7 +63,8 @@ Open production build on [http://localhost:5000/](http://localhost:5000/)
 Or copy to a Web Server
 
 
-### To-Do
+## To-Do
+
 - [ ] Add categories checkboxes
 - [ ] Add a page with description for each news source
 - [ ] Add a logo up top instead of the React Logo
