@@ -1,7 +1,7 @@
 <!---  LOGO   -->
 <div align="center">
 <p>
-<img src="http://i.imgur.com/CSu35WO.png" width="250"/>
+<img src="./logo.png" width="200"/>
 </p>
 
 
@@ -10,15 +10,15 @@
 <a href="">
   <img alt="first release" src="https://img.shields.io/badge/release-v1.0-brightgreen.svg" />
 </a>
-
-<a href="https://www.npmjs.com/package/npm">
-  <img style="width:30px;" src="./react.svg" />
+&nbsp
+<a href="https://facebook.github.io/react/">
+  <img width="30" src="https://raw.githubusercontent.com/alemesa/React-News-App/master/react.svg" />
 </a>
 
 
 </p>
 
-✨ __React News__ is a React App showing news results from more than 50 sources, super snappy for quick switching✨
+✨ __React News__ is a React App showing news results from more than 70 sources. Uses data from [News API](https://newsapi.org/), it's responsive and super snappy for quick switching thanks to React Virtual DOM✨
 
 <p><a href="http://news-app.surge.sh/" class="btn btn-primary btn-md">Launch App</a></p>
 </div>
@@ -58,3 +58,10 @@ serve -s build
 Open production build on [http://localhost:5000/](http://localhost:5000/)
 
 Or copy to a Web Server
+
+
+### To-Do
+- [ ] Add categories checkboxes
+- [ ] Add a page with description for each news source
+- [ ] Add a logo up top instead of the React Logo
+- [ ] ! Maybe change flexbox for CSS Grid
