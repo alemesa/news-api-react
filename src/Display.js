@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 
 class Display extends Component {
@@ -8,24 +8,21 @@ class Display extends Component {
     // Set initial state
     this.state = {
       articles: []
-    }
-
+    };
   }
 
   // Lifecycle method
   componentWillMount() {
     this.getArticles(this.props.default);
-
   }
 
   componentWillReceiveProps(nextProps) {
-
     if (nextProps !== this.props) {
-
-      this.setState({url: `https://newsapi.org/v1/articles?source=${nextProps.default}&apiKey=2d39f4a218f64820a010ae5523437bc4`});
+      this.setState({
+        url: `https://newsapi.org/v1/articles?source=${nextProps.default}&apiKey=2d39f4a218f64820a010ae5523437bc4`
+      });
 
       this.getArticles(nextProps.default);
-
     }
   }
 
@@ -36,57 +33,61 @@ class Display extends Component {
     var hour = time.getHours();
     var minute = time.getMinutes();
     var month = time.getMonth() + 1;
-    var composedTime = day + "/" + month + "/" + year + " | " + hour + ":" + ((minute < 10)
-      ? "0" + minute
-      : minute);
+    var composedTime =
+      day +
+      '/' +
+      month +
+      '/' +
+      year +
+      ' | ' +
+      hour +
+      ':' +
+      (minute < 10 ? '0' + minute : minute);
     return composedTime;
   }
 
   getArticles(url) {
-
-    const apiKey = "2d39f4a218f64820a010ae5523437bc4";
+    const apiKey = '2d39f4a218f64820a010ae5523437bc4';
     // Make HTTP reques with Axios
     axios
       .get(`https://newsapi.org/v1/articles?source=${url}&apiKey=${apiKey}`)
-      .then((res) => {
+      .then(res => {
         const articles = res.data.articles;
         // Set state with result
         console.log(articles);
-        this.setState({articles: articles});
+        this.setState({ articles: articles });
       })
-      .catch((error) => {
+      .catch(error => {
         console.log(error);
       });
-
   }
 
   render() {
     return (
       <div className="cardsContainer">
-
-        {this
-          .state
-          .articles
-          .map((news, i) => {
-            return <div className="card" key={i}>
+        {this.state.articles.map((news, i) => {
+          return (
+            <div className="card" key={i}>
               <div className="content">
                 <h3>
-                  <a href={news.url} target="_blank">{news.title}</a>
+                  <a href={news.url} target="_blank">
+                    {news.title}
+                  </a>
                 </h3>
                 <p>{news.description}</p>
                 <div className="author">
-                  <p>By <i>{news.author ? news.author : this.props.default}</i>
+                  <p>
+                    By <i>{news.author ? news.author : this.props.default}</i>
                   </p>
                   <p>{this.formatDate(news.publishedAt)}</p>
                 </div>
               </div>
               <div className="image">
-                <img src={news.urlToImage} alt=""/>
+                <img src={news.urlToImage} alt="" />
               </div>
             </div>
-          })
-}
-
+          );
+        })}
       </div>
     );
   }
