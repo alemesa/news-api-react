@@ -19,7 +19,9 @@ class Display extends Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps !== this.props) {
       this.setState({
-        url: `https://newsapi.org/v1/articles?source=${nextProps.default}&apiKey=2d39f4a218f64820a010ae5523437bc4`
+        url: `https://newsapi.org/v2/top-headlines?sources=${
+          nextProps.default
+        }&apiKey=ef90a7354e49437abcd71a8748c9cfd7`
       });
 
       this.getArticles(nextProps.default);
@@ -47,10 +49,12 @@ class Display extends Component {
   }
 
   getArticles(url) {
-    const apiKey = '2d39f4a218f64820a010ae5523437bc4';
+    const apiKey = 'ef90a7354e49437abcd71a8748c9cfd7';
     // Make HTTP reques with Axios
     axios
-      .get(`https://newsapi.org/v1/articles?source=${url}&apiKey=${apiKey}`)
+      .get(
+        `https://newsapi.org/v2/top-headlines?sources=${url}&apiKey=${apiKey}`
+      )
       .then(res => {
         const articles = res.data.articles;
         // Set state with result

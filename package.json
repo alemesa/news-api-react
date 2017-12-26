@@ -3,19 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.17.1",
     "bootstrap": "^3.3.7",
-    "moveto": "^1.6.1",
-    "react": "^15.5.4",
-    "react-bootstrap": "^0.30.10",
-    "react-dom": "^15.5.4",
-    "react-ionicons": "^1.4.7",
-    "react-scrollable-anchor": "^0.4.2"
+    "moveto": "^1.7.1",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.31.5",
+    "react-dom": "^16.2.0",
+    "react-ionicons": "^2.1.6",
+    "react-scrollable-anchor": "^0.5.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-surge": "^0.1.0",
-    "react-scripts": "0.9.5"
+    "react-scripts": "1.0.17"
   },
   "scripts": {
     "start": "react-scripts start",
