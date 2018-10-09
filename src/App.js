@@ -11,6 +11,25 @@ class App extends Component {
   render() {
     return (
       <div className="app">
+
+
+      <div class="container">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+              </li>
+          </ul>
+      </div>
         <div className="appHeader">
           <img className="appLogo" src={logo} alt="React Logo"/>
 
