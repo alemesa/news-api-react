@@ -42,8 +42,7 @@ class Search extends Component {
 
   render() {
     var style = {
-      textAlign: 'center',
-      align:'center'
+        textAlign:'center'
     };
     return (
       <div className="">
@@ -62,7 +61,7 @@ class Search extends Component {
         </div>
         <Outlet default={this.state.value} />
 
-        <Nyooz />
+        <Nyooz default={this.state.value}/>
       </div>
     );
   }

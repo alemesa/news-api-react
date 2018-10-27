@@ -5,10 +5,15 @@ import { Row, Col, Container } from 'reactstrap';
 import Post from './Post';
 
 class Display extends Component {
-  state = {
-      articles: [],
-      numberOfArticles: '',
-    }
+  constructor(props) {
+    // Pass props to parent class
+    super(props);
+    // Set initial state
+    this.state = {
+      articles: []
+    };
+  }
+
 
 
   // Lifecycle method
@@ -74,9 +79,7 @@ class Display extends Component {
       });
   }
 
-  sayHello = () => {
-    console.log('Aloha');
-  }
+
 
   createRows = () => {
 
@@ -103,7 +106,7 @@ class Display extends Component {
   render() {
     return (
     <div className="cardsContainer">
-      
+
       {this.state.articles.map((news, i) => {
         return (
           <Post

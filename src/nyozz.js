@@ -12,23 +12,78 @@ class Nyooz extends Component {
         selectedPostId: null,
       }
 
-    componentDidMount () {
-        axios.get( 'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=f47dd464d0f64fe4b27bf0dd19919881' )
-            .then( response => {
-                console.log(response.data)
-                const posts = response.data.articles.slice(0,18);
-                const updatedPosts = posts.map(post => {
-                     return {
-                        ...post,
-                        author: 'Max',
-                        todate: '18th Augest 2018',
-                    }
-                });
-                this.setState({posts: updatedPosts});
-                console.log(updatedPosts);
-            } );
-
+    componentWillMount() {
+        this.getArticles(this.props.default);
     }
+
+    componentWillReceiveProps(nextProps) {
+      if (nextProps !== this.props) {
+        this.setState({
+          url: `https://newsapi.org/v2/top-headlines?sources=${
+            nextProps.default
+          }&apiKey=f47dd464d0f64fe4b27bf0dd19919881`
+        });
+
+        this.getArticles(nextProps.default);
+      }
+    }
+
+    formatDate(date) {
+      var time = new Date(date);
+      var year = time.getFullYear();
+      var day = time.getDate();
+      var hour = time.getHours();
+      var minute = time.getMinutes();
+      var month = time.getMonth() + 1;
+      var composedTime =
+        day +
+        '/' +
+        month +
+        '/' +
+        year +
+        ' | ' +
+        hour +
+        ':' +
+        (minute < 10 ? '0' + minute : minute);
+      return composedTime;
+    }
+
+
+    getArticles(url) {
+      const apiKey = 'f47dd464d0f64fe4b27bf0dd19919881'
+      axios.get( `https://newsapi.org/v2/top-headlines?sources=${url}&apiKey=${apiKey}` )
+          .then( response => {
+              console.log(response.data)
+              const posts = response.data.articles.slice(0,18);
+              const updatedPosts = posts.map(post => {
+                   return {
+                      ...post,
+                      author: 'Max',
+                      todate: '18th Augest 2018',
+                  }
+              });
+              this.setState({posts: updatedPosts});
+              console.log(updatedPosts);
+          } );
+    }
+
+    // componentDidMount () {
+    //     axios.get( 'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=f47dd464d0f64fe4b27bf0dd19919881' )
+    //         .then( response => {
+    //             console.log(response.data)
+    //             const posts = response.data.articles.slice(0,18);
+    //             const updatedPosts = posts.map(post => {
+    //                  return {
+    //                     ...post,
+    //                     author: 'Max',
+    //                     todate: '18th Augest 2018',
+    //                 }
+    //             });
+    //             this.setState({posts: updatedPosts});
+    //             console.log(updatedPosts);
+    //         } );
+    //
+    // }
 
 
 
@@ -42,6 +97,7 @@ class Nyooz extends Component {
                 description={post.description}
                 img={post.urlToImage}
                 url={post.url}
+                newsDate={post.publishedAt}
                 random_indicator={post.sentiment} />;
         });
 
