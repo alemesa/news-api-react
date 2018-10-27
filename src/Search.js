@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Display from './Display.js';
+import Nyooz from './nyozz.js';
 import './Display.css';
 import Outlet from './Outlet.js';
 import './Outlet.css';

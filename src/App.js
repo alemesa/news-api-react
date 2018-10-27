@@ -11,36 +11,18 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-
-
-      <div class="container">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <ul class="navbar-nav">
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Services</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
-              </li>
-          </ul>
-      </div>
-        <div className="appHeader">
-          <img className="appLogo" src={logo} alt="React Logo"/>
-
-          <div className="title">
-            <h1>&lt;insert fancy name&gt;</h1>
-            <h4>Powered by
-              <a href="https://newsapi.org/"> News API </a>🔥 </h4>
-          </div>
-
-          <img className="scriptLogo" src={news} alt="Javascript Logo"/>
+      <nav className="navbar navbar-expand-sm navbar-light bg-dark mb-3">
+        <div className="container">
+            <a className="navbar-brand" href="#"><img className="appLogo" src={logo} alt="React Logo"/></a>
+            <div className="title">
+              <h1>News Around the World</h1>
+              <h4>Powered by
+                <a href="https://newsapi.org/"> News API </a>🔥 </h4>
+            </div>
+            <img className="scriptLogo" src={news} alt="Javascript Logo"/>
         </div>
+        </nav>
+
         <Search default="bbc-news"/>
         <Footer/>
       </div>

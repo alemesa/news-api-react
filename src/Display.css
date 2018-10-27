@@ -1,4 +1,4 @@
-.cardsContainer {
+/* .cardsContainer {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -93,4 +93,9 @@
 		justify-content: center;
 		align-items: center;
 	}
+} */
+
+.my-car-image{
+  height: 100px;
+  width: 100px;
 }

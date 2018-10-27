@@ -10,24 +10,29 @@ h3,
 h4,
 h5,
 h6,
+
 a {
   font-family: 'Libre Baskerville', 'Merriweather', serif;
+  text-decoration: none;
 }
 
 .title h1 {
   font-size: 1.7em;
+  color: white;
 }
 
-.app {
+/* .app {
   text-align: center;
-}
+} */
 
 a {
   color: black;
+  text-decoration: none;
 }
 
 .title a {
   color: white;
+  text-decoration: none;
 }
 
 .appLogo {

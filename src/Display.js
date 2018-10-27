@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './Display.css';
+import { Row, Col, Container } from 'reactstrap';
+import Post from './Post';
 
 class Display extends Component {
-  constructor(props) {
-    // Pass props to parent class
-    super(props);
-    // Set initial state
-    this.state = {
-      articles: []
-    };
-  }
+  state = {
+      articles: [],
+      numberOfArticles: '',
+    }
+
 
   // Lifecycle method
   componentWillMount() {
@@ -56,45 +56,70 @@ class Display extends Component {
         `https://newsapi.org/v2/top-headlines?sources=${url}&apiKey=${apiKey}`
       )
       .then(res => {
+
         const articles = res.data.articles;
+        const Updatedarticles = articles.map(article => {
+          return {
+            ...article,
+          }
+        });
         // Set state with result
         console.log(articles);
-        this.setState({ articles: articles });
+        console.log(articles.length);
+        this.setState({ numberOfArticles: articles.length })
+        this.setState({ articles: Updatedarticles });
       })
       .catch(error => {
         console.log(error);
       });
   }
 
+  sayHello = () => {
+    console.log('Aloha');
+  }
+
+  createRows = () => {
+
+    const posts = this.state.articles.map(post => {
+      console.log('Insider');
+      return <Post
+        title = 'Hello'
+         />;
+    });
+
+    let rows = []
+    let column = []
+    for (let i = 0; i < this.state.articles.length; i+=3) {
+      console.log(this.state.articles[i]);
+      let column = []
+      column.push(<div key={(i).toString()}> {this.state.articles[i]}</div>)
+      rows.push(<div key={"r"+ i.toString() }>{column} </div>)
+
+    }
+    return rows
+  }
+
+
   render() {
     return (
-      <div className="cardsContainer">
-        {this.state.articles.map((news, i) => {
-          return (
-            <div className="card" key={i}>
-              <div className="content">
-                <h3>
-                  <a href={news.url} target="_blank">
-                    {news.title}
-                  </a>
-                </h3>
-                <p>{news.description}</p>
-                <div className="author">
-                  <p>
-                    By <i>{news.author ? news.author : this.props.default}</i>
-                  </p>
-                  <p>{this.formatDate(news.publishedAt)}</p>
-                </div>
-              </div>
-              <div className="image">
-                <img src={news.urlToImage} alt="" />
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    );
+    <div className="cardsContainer">
+      
+      {this.state.articles.map((news, i) => {
+        return (
+          <Post
+                key={i}
+                title = {news.title}
+                description = {news.description}
+
+          />
+        );
+      })}
+    </div>
+  );
+
+
   }
+
 }
 
 export default Display;
