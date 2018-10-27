@@ -1,128 +1,94 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './Display.css';
-import { Row, Col, Container } from 'reactstrap';
 import Post from './Post';
+import { Row, Col, Container } from 'reactstrap';
+
+
 
 class Display extends Component {
-  constructor(props) {
-    // Pass props to parent class
-    super(props);
-    // Set initial state
-    this.state = {
-      articles: []
-    };
-  }
 
+    state = {
+        posts: [],
+        selectedPostId: null,
+      }
 
-
-  // Lifecycle method
-  componentWillMount() {
-    this.getArticles(this.props.default);
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps !== this.props) {
-      this.setState({
-        url: `https://newsapi.org/v2/top-headlines?sources=${
-          nextProps.default
-        }&apiKey=ef90a7354e49437abcd71a8748c9cfd7`
-      });
-
-      this.getArticles(nextProps.default);
+    // Lifecycle method
+    componentWillMount() {
+        this.getArticles(this.props.default);
     }
-  }
 
-  formatDate(date) {
-    var time = new Date(date);
-    var year = time.getFullYear();
-    var day = time.getDate();
-    var hour = time.getHours();
-    var minute = time.getMinutes();
-    var month = time.getMonth() + 1;
-    var composedTime =
-      day +
-      '/' +
-      month +
-      '/' +
-      year +
-      ' | ' +
-      hour +
-      ':' +
-      (minute < 10 ? '0' + minute : minute);
-    return composedTime;
-  }
-
-  getArticles(url) {
-    const apiKey = 'ef90a7354e49437abcd71a8748c9cfd7';
-    // Make HTTP reques with Axios
-    axios
-      .get(
-        `https://newsapi.org/v2/top-headlines?sources=${url}&apiKey=${apiKey}`
-      )
-      .then(res => {
-
-        const articles = res.data.articles;
-        const Updatedarticles = articles.map(article => {
-          return {
-            ...article,
-          }
+    componentWillReceiveProps(nextProps) {
+      if (nextProps !== this.props) {
+        this.setState({
+          url: `https://newsapi.org/v2/top-headlines?sources=${
+            nextProps.default
+          }&apiKey=f47dd464d0f64fe4b27bf0dd19919881`
         });
-        // Set state with result
-        console.log(articles);
-        console.log(articles.length);
-        this.setState({ numberOfArticles: articles.length })
-        this.setState({ articles: Updatedarticles });
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  }
 
-
-
-  createRows = () => {
-
-    const posts = this.state.articles.map(post => {
-      console.log('Insider');
-      return <Post
-        title = 'Hello'
-         />;
-    });
-
-    let rows = []
-    let column = []
-    for (let i = 0; i < this.state.articles.length; i+=3) {
-      console.log(this.state.articles[i]);
-      let column = []
-      column.push(<div key={(i).toString()}> {this.state.articles[i]}</div>)
-      rows.push(<div key={"r"+ i.toString() }>{column} </div>)
-
+        this.getArticles(nextProps.default);
+      }
     }
-    return rows
-  }
 
 
-  render() {
-    return (
-    <div className="cardsContainer">
 
-      {this.state.articles.map((news, i) => {
+    getArticles(url) {
+      const apiKey = 'f47dd464d0f64fe4b27bf0dd19919881';
+      // Make HTTP reques with Axios
+      axios.get(
+        `https://newsapi.org/v2/top-headlines?sources=${url}&apiKey=${apiKey}` )
+          .then( response => {
+              console.log(response.data)
+              const posts = response.data.articles.slice(0,18);
+              const updatedPosts = posts.map(post => {
+                   return {
+                      ...post,
+
+                  }
+              });
+              // Set state with result
+              this.setState({posts: updatedPosts});
+              console.log(updatedPosts);
+          })
+          .catch(error => {
+            console.log(error);
+          });
+    }
+
+    createRows = () => {
+
+        const posts = this.state.posts.map(post => {
+            return <Post
+                //key={post.id}
+                title={post.title}
+                description={post.description}
+                img={post.urlToImage}
+                url={post.url}
+                newsDate={post.publishedAt}
+                author= {post.author}
+                random_indicator={post.sentiment} />;
+        });
+
+        let rows = []
+        for (let i = 0; i < posts.length; i+=2) {
+        let children = []
+            children.push(<Col  className="col-md-6" key={(i).toString()} >{posts[i]} </Col>)
+            children.push(<Col  className="col-md-6"  key={(i+1).toString()}> {posts[i+1]}</Col>)
+            rows.push(<Row className="row-mb-2" key={"r"+ i.toString() }>{children} </Row>)
+
+        }
+        return rows
+      }
+
+
+    render () {
         return (
-          <Post
-                key={i}
-                title = {news.title}
-                description = {news.description}
-
-          />
+            <div>
+                <section className="Posts">
+                        {this.createRows()}
+                </section>
+            </div>
         );
-      })}
-    </div>
-  );
-
-
-  }
-
+    }
 }
 
 export default Display;

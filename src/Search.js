@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Display from './Display.js';
-import Nyooz from './nyozz.js';
-import './Display.css';
+import './styles/Display.css';
 import Outlet from './Outlet.js';
-import './Outlet.css';
+import './styles/Outlet.css';
 
 class Search extends Component {
   constructor(props) {
@@ -44,7 +43,7 @@ class Search extends Component {
     var style = {
         textAlign:'center'
     };
-    
+
     return (
       <div className="">
         <div className="jumbotron">
@@ -72,7 +71,7 @@ class Search extends Component {
         </div>
 
 
-        <Nyooz default={this.state.value}/>
+        <Display default={this.state.value}/>
       </div>
     );
   }

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './Outlet.css';
+import './styles/Outlet.css';
 import { findFlag } from './helpers';
-import Nyooz from './nyozz.js';
 
 class Outlet extends Component {
   constructor(props) {

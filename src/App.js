@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import './App.css';
+import './styles/App.css';
 import Search from './Search.js';
-import './Search.css';
+import './styles/Search.css';
 import Footer from './Footer.js';
-import './Footer.css';
+import './styles/Footer.css';
 import logo from './images/react.svg';
-import news from './images/news.png';
+import news from './images/newspaper.png';
 
 class App extends Component {
   render() {
