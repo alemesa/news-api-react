@@ -8,6 +8,7 @@ select {
   border-bottom: 1px solid #757575;
   margin-bottom: 2px;
   outline: none;
+  text-align: center;
 }
 @media screen and (max-width: 1200px) {
 	select{
@@ -19,5 +20,3 @@ select {
     width:80%;
   }
 }
-
-

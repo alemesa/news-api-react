@@ -41,10 +41,15 @@ class Search extends Component {
   }
 
   render() {
+    var style = {
+      textAlign: 'center',
+      align:'center'
+    };
     return (
       <div className="">
-        <h4>Select from {this.state.count} News Outlets</h4>
-        <select value={this.state.value} onChange={this.handleChange}>
+        <div style={style}>
+        <h4 style={style}>Select from {this.state.count} News Outlets</h4>
+        <select style={style} value={this.state.value} onChange={this.handleChange}>
           >
           {this.state.data.map((outlet, i) => {
             return (
@@ -54,8 +59,10 @@ class Search extends Component {
             );
           })}
         </select>
+        </div>
         <Outlet default={this.state.value} />
-        <Display default={this.state.value} />
+
+        <Nyooz />
       </div>
     );
   }

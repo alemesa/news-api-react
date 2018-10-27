@@ -13,6 +13,7 @@ class Outlet extends Component {
     };
   }
 
+
   // Lifecycle method
   componentWillMount() {
     // Make HTTP reques with Axios
@@ -38,9 +39,12 @@ class Outlet extends Component {
       });
   }
 
+
+
   render() {
+
     return (
-      <div className="outletSection">
+      <div className="outletSection" >
         <h4>Outlet Description 📰</h4>
 
         {this.state.data.map((item, y) => {
