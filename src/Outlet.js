@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './Outlet.css';
 import { findFlag } from './helpers';
+import Nyooz from './nyozz.js';
 
 class Outlet extends Component {
   constructor(props) {
@@ -66,7 +67,7 @@ class Outlet extends Component {
                   <p>{item.category.replace(/\b\w/g, l => l.toUpperCase())}</p>
                   <p>{item.language.toUpperCase()}</p>
                 </div>
-                <p>{item.description}</p>
+                <p className="lead"> {item.description}</p>
               </div>
             );
           } else {

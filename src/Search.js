@@ -44,22 +44,33 @@ class Search extends Component {
     var style = {
         textAlign:'center'
     };
+    
     return (
       <div className="">
-        <div style={style}>
-        <h4 style={style}>Select from {this.state.count} News Outlets</h4>
-        <select style={style} value={this.state.value} onChange={this.handleChange}>
-          >
-          {this.state.data.map((outlet, i) => {
-            return (
-              <option key={i} value={outlet.id}>
-                {outlet.name}
-              </option>
-            );
-          })}
-        </select>
+        <div className="jumbotron">
+          <div className="modal-body row">
+            <div className="col-sm-4">
+              <div style={style}>
+                <h4 style={style}>Select from {this.state.count} News Outlets</h4>
+                <p className="lead"> BBC-World, Google News, Boolmberg And Many other</p>
+                <p className="lead"> </p>
+                <select style={style} value={this.state.value} onChange={this.handleChange}>
+                {this.state.data.map((outlet, i) => {
+                  return (
+                    <option key={i} value={outlet.id}>
+                      {outlet.name}
+                      </option>
+                    );
+                  })}
+                  </select>
+                </div>
+              </div>
+          <div className="col-sm-8">
+          <Outlet default={this.state.value} />
+          </div>
+          </div>
         </div>
-        <Outlet default={this.state.value} />
+
 
         <Nyooz default={this.state.value}/>
       </div>

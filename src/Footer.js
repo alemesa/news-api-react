@@ -18,14 +18,7 @@ class Footer extends Component {
           >
             <i className="fa fa-2x fa-linkedin" aria-hidden="true" />
           </a>
-          <a
-            id="repo"
-            href="https://github.com/alemesa/React-News-App"
-            target="_blank"
-          >
-            Repo
-            <i className="fa fa-code-fork" aria-hidden="true" />
-          </a>
+
         </div>
 
         <a className="smoothScroll" href="#">
@@ -35,7 +28,16 @@ class Footer extends Component {
         <span className="coffee">
           Made with
           <i className="fa fa-coffee" aria-hidden="true" />
+          <a
+            id="repo"
+            href="https://github.com/alemesa/React-News-App"
+            target="_blank"
+          >
+            Repo
+            <i className="fa fa-code-fork" aria-hidden="true" />
+          </a>
         </span>
+
       </div>
     );
   }

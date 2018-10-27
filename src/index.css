@@ -15,13 +15,12 @@ body {
 }
 
 a {
-  /* border-bottom: 2px solid #ffc600; */
   text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
   border-bottom: 2px solid black;
-}
+} */
 
 body {
   display: flex;

@@ -58,8 +58,7 @@ class Nyooz extends Component {
               const updatedPosts = posts.map(post => {
                    return {
                       ...post,
-                      author: 'Max',
-                      todate: '18th Augest 2018',
+                    
                   }
               });
               this.setState({posts: updatedPosts});
@@ -98,6 +97,7 @@ class Nyooz extends Component {
                 img={post.urlToImage}
                 url={post.url}
                 newsDate={post.publishedAt}
+                author= {post.author}
                 random_indicator={post.sentiment} />;
         });
 

@@ -1,8 +1,6 @@
 .outletSection {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
-    margin-top: 1rem;
-    padding: 10px;
     border-style: none none double none;
     border-color:#757575;
     border-width:5px;
@@ -25,5 +23,5 @@
 }
 
 .outletText{
-  text-align: center;
+  text-align: right;
 }
