@@ -23,7 +23,7 @@ class App extends Component {
         </div>
         </nav>
 
-        <Search default="bbc-news"/>
+        <Search default="cnn"/>
         <Footer/>
       </div>
     );

@@ -24,7 +24,7 @@ class Display extends Component {
             nextProps.default
           }&apiKey=f47dd464d0f64fe4b27bf0dd19919881`
         });
-
+        console.log("this is nextprops "  + nextProps.default);
         this.getArticles(nextProps.default);
       }
     }
@@ -42,6 +42,7 @@ class Display extends Component {
               const updatedPosts = posts.map(post => {
                    return {
                       ...post,
+                      newsid: url,
 
                   }
               });
@@ -59,6 +60,7 @@ class Display extends Component {
         const posts = this.state.posts.map(post => {
             return <Post
                 //key={post.id}
+                header={post.newsid}
                 title={post.title}
                 description={post.description}
                 img={post.urlToImage}
@@ -84,6 +86,7 @@ class Display extends Component {
         return (
             <div>
                 <section className="Posts">
+
                         {this.createRows()}
                 </section>
             </div>
