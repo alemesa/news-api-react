@@ -18,7 +18,7 @@ class Search extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
 
-    this.apiUrl = `https://newsapi.org/v2/sources?language=en&apiKey=${process.env.API_KEY}`;
+    this.apiUrl = `https://newsapi.org/v2/sources?language=en&apiKey=${process.env.REACT_APP_API_KEY}`;
   }
 
   handleChange(event) {
