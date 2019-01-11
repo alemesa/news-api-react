@@ -8,6 +8,6 @@ action "Publish" {
   secrets = [
     "GITHUB_TOKEN",
     "NETLIFY_SITE_ID",
-    "API_KEY",
+    "REACT_APP_API_KEY",
   ]
 }
