@@ -59,7 +59,7 @@ class Display extends Component {
             <div className="card" key={i}>
               <div className="content">
                 <h3>
-                  <a href={news.url} target="_blank">
+                  <a href={news.url} target="_blank" rel="noopener noreferrer">
                     {news.title}
                   </a>
                 </h3>

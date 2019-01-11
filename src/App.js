@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Search from './Search.js';
 import './Search.css';
@@ -12,18 +12,20 @@ class App extends Component {
     return (
       <div className="app">
         <div className="appHeader">
-          <img className="appLogo" src={logo} alt="React Logo"/>
+          <img className="appLogo" src={logo} alt="React Logo" />
 
           <div className="title">
             <h1>&lt;insert fancy name&gt;</h1>
-            <h4>Powered by
-              <a href="https://newsapi.org/"> News API </a>🔥 </h4>
+            <h4>
+              Powered by
+              <a href="https://newsapi.org/"> News API </a>🔥{' '}
+            </h4>
           </div>
 
-          <img className="scriptLogo" src={news} alt="Javascript Logo"/>
+          <img className="scriptLogo" src={news} alt="Javascript Logo" />
         </div>
-        <Search default="bbc-news"/>
-        <Footer/>
+        <Search default="bbc-news" />
+        <Footer />
       </div>
     );
   }

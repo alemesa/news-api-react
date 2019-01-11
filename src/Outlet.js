@@ -37,7 +37,12 @@ class Outlet extends Component {
   render() {
     return (
       <div className="outletSection">
-        <h4>Outlet Description 📰</h4>
+        <h4>
+          Outlet Description{' '}
+          <span role="img" aria-label="Newspaper Emoji">
+            📰
+          </span>
+        </h4>
 
         {this.state.data.map((item, y) => {
           if (item.id === this.state.value) {
@@ -45,7 +50,7 @@ class Outlet extends Component {
               <div key={y} className="singleNew">
                 <div className="generalInfo">
                   <h4>
-                    <a href={item.url} target="_blank">
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">
                       {item.name}
                     </a>
                   </h4>
