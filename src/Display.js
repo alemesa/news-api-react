@@ -18,11 +18,7 @@ class Display extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps !== this.props) {
-      this.setState({
-        url: `https://newsapi.org/v2/top-headlines?sources=${
-          nextProps.default
-        }&apiKey=ef90a7354e49437abcd71a8748c9cfd7`
-      });
+      this.setState({ url: `https://newsapi.org/v2/top-headlines?sources=${nextProps.default}&apiKey=${process.env.API_KEY}` });
 
       this.getArticles(nextProps.default);
     }
@@ -35,26 +31,15 @@ class Display extends Component {
     var hour = time.getHours();
     var minute = time.getMinutes();
     var month = time.getMonth() + 1;
-    var composedTime =
-      day +
-      '/' +
-      month +
-      '/' +
-      year +
-      ' | ' +
-      hour +
-      ':' +
-      (minute < 10 ? '0' + minute : minute);
+    var composedTime = day + '/' + month + '/' + year + ' | ' + hour + ':' + (minute < 10 ? '0' + minute : minute);
     return composedTime;
   }
 
   getArticles(url) {
-    const apiKey = 'ef90a7354e49437abcd71a8748c9cfd7';
+    const apiKey = process.env.API_KEY;
     // Make HTTP reques with Axios
     axios
-      .get(
-        `https://newsapi.org/v2/top-headlines?sources=${url}&apiKey=${apiKey}`
-      )
+      .get(`https://newsapi.org/v2/top-headlines?sources=${url}&apiKey=${apiKey}`)
       .then(res => {
         const articles = res.data.articles;
         // Set state with result

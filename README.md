@@ -4,7 +4,6 @@
 <img src="./logo.png" width="200"/>
 </p>
 
-
 <!---  SHIELDS   -->
 <p>
 <a href="">
@@ -15,23 +14,22 @@
   <img alt="react is dope" src="https://img.shields.io/badge/React-is%20dope%20%E2%AD%90-00D8FF.svg" />
 </a>
 
-
 </p>
 
-🔥 __React News__ is a React App showing news results from more than 70 sources. Uses data from [News API](https://newsapi.org/), it's responsive and super snappy for quick switching thanks to React Virtual DOM 🔥
+🔥 **React News** is a React App showing news results from more than 70 sources. Uses data from [News API](https://newsapi.org/), it's responsive and super snappy for quick switching thanks to React Virtual DOM 🔥
 
-<p><a href="http://news-app.surge.sh/" class="btn btn-primary btn-md">Launch App</a></p>
+<p><a href="https://quirky-goldberg-cc6cf5.netlify.com" class="btn btn-primary btn-md">Launch App</a></p>
 </div>
 
 ## Features
 
-* ⚒️ __Simple__: Bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) and using [React](https://facebook.github.io/react/)
+- ⚒️ **Simple**: Bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) and using [React](https://facebook.github.io/react/)
 
-* 📊 __Real-time__: Real time data obtained from the leading news resource [News API](https://newsapi.org/)
+- 📊 **Real-time**: Real time data obtained from the leading news resource [News API](https://newsapi.org/)
 
-* 📱 __Responsive__: Made mobile responsive with Flexbox
+- 📱 **Responsive**: Made mobile responsive with Flexbox
 
-* 🔥 __Live__: Deployed with [Surge](https://surge.sh/)
+- 🔥 **Live**: Deployed with [Surge](https://surge.sh/)
 
 <!---  SCREENSHOOT   -->
 
@@ -49,6 +47,7 @@ Fork or download this repo , move inside and run:
 npm install
 npm start
 ```
+
 Open development build on [http://localhost:3000/](http://localhost:3000/)
 
 To deploy it:
@@ -58,10 +57,10 @@ npm run build
 npm install -g serve
 serve -s build
 ```
+
 Open production build on [http://localhost:5000/](http://localhost:5000/)
 
 Or copy to a Web Server
-
 
 ## To-Do
 

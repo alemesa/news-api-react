@@ -28,14 +28,10 @@ class Outlet extends Component {
 
   getSources() {
     // Make HTTP reques with Axios
-    axios
-      .get(
-        `https://newsapi.org/v2/sources?language=en&apiKey=ef90a7354e49437abcd71a8748c9cfd7`
-      )
-      .then(res => {
-        // Set state with result
-        this.setState({ data: res.data.sources });
-      });
+    axios.get(`https://newsapi.org/v2/sources?language=en&apiKey=${process.env.API_KEY}`).then(res => {
+      // Set state with result
+      this.setState({ data: res.data.sources });
+    });
   }
 
   render() {
@@ -53,11 +49,7 @@ class Outlet extends Component {
                       {item.name}
                     </a>
                   </h4>
-                  <img
-                    className="flagCode"
-                    src={findFlag(item.country)}
-                    alt="flag"
-                  />
+                  <img className="flagCode" src={findFlag(item.country)} alt="flag" />
                   <p>{item.country.toUpperCase()}</p>
                   <p>{item.category.replace(/\b\w/g, l => l.toUpperCase())}</p>
                   <p>{item.language.toUpperCase()}</p>
