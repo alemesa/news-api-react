@@ -6,14 +6,12 @@ class Footer extends Component {
     return (
       <div className="footerSection">
         <div className="social">
-          <a href="https://github.com/alemesa" target="_blank">
+          <a href="https://github.com/avinash28196" target="_blank">
             <i className="fa fa-2x fa-github" aria-hidden="true" />
           </a>
-          <a href="https://twitter.com/alelikesramen" target="_blank">
-            <i className="fa fa-2x fa-twitter" aria-hidden="true" />
-          </a>
+
           <a
-            href="https://www.linkedin.com/in/alejandro-mesa-suarez-604916a2/"
+            href="https://www.linkedin.com/in/avinash28196/"
             target="_blank"
           >
             <i className="fa fa-2x fa-linkedin" aria-hidden="true" />
@@ -30,7 +28,7 @@ class Footer extends Component {
           <i className="fa fa-coffee" aria-hidden="true" />
           <a
             id="repo"
-            href="https://github.com/alemesa/React-News-App"
+            href="https://github.com/avinash28196/React-News-App"
             target="_blank"
           >
             Repo

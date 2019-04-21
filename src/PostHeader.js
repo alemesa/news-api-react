@@ -31,7 +31,7 @@ class PostHeader extends Component {
     // Make HTTP reques with Axios
     axios
       .get(
-        `https://newsapi.org/v2/sources?language=en&apiKey=ef90a7354e49437abcd71a8748c9cfd7`
+        `https://newsapi.org/v2/sources?language=en&apiKey=13235f0d880743ba9e900cbe25cea29e`
       )
       .then(res => {
         // Set state with result

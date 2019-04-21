@@ -22,7 +22,8 @@ class Display extends Component {
         this.setState({
           url: `https://newsapi.org/v2/top-headlines?sources=${
             nextProps.default
-          }&apiKey=f47dd464d0f64fe4b27bf0dd19919881`
+          }&apiKey=13235f0d880743ba9e900cbe25cea29e`
+
         });
         console.log("this is nextprops "  + nextProps.default);
         this.getArticles(nextProps.default);
@@ -32,7 +33,7 @@ class Display extends Component {
 
 
     getArticles(url) {
-      const apiKey = 'f47dd464d0f64fe4b27bf0dd19919881';
+      const apiKey = '13235f0d880743ba9e900cbe25cea29e';
       // Make HTTP reques with Axios
       axios.get(
         `https://newsapi.org/v2/top-headlines?sources=${url}&apiKey=${apiKey}` )
